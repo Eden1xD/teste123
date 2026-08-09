@@ -348,7 +348,7 @@
         ------------------------------------------------- */
 
         socket.on(
-            'roomCreated',
+            'room-created',
             room => {
 
                 state.room =
@@ -387,7 +387,7 @@
         ------------------------------------------------- */
 
         socket.on(
-            'roomJoined',
+            'room-joined',
             room => {
 
                 state.room =
@@ -449,7 +449,7 @@
         ------------------------------------------------- */
 
         socket.on(
-            'roomUpdate',
+            'room-update',
             room => {
 
                 state.room =
@@ -469,7 +469,7 @@
         ------------------------------------------------- */
 
         socket.on(
-            'gameStarted',
+            'game-started',
             room => {
 
                 state.room =
