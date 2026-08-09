@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <!-- =====================================================
+         CONFIGURAÇÕES
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#08080d"
+    >
+
+    <meta
+        name="description"
+        content="Hangout — Jogo da Forca Multiplayer"
+    >
+
+
+    <!-- =====================================================
+         TÍTULO
+    ====================================================== -->
+
+    <title>
+        Hangout — Forca Multiplayer
+    </title>
+
+
+    <!-- =====================================================
+         FONTES
+    ====================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/game.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/responsive.css"
+    >
+
+</head>
+
+
+<body class="game-page">
+
+
+    <!-- =====================================================
+         BACKGROUND
+    ====================================================== -->
+
+    <div class="background">
+
+        <div class="background-grid"></div>
+
+        <div class="background-glow glow-one"></div>
+
+        <div class="background-glow glow-two"></div>
+
+    </div>
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="game-header">
+
+        <div class="game-header-left">
+
+            <button
+                class="icon-button"
+                id="leaveGameButton"
+                type="button"
+                title="Sair da partida"
+            >
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+            </button>
+
+
+            <div class="game-brand">
+
+                <div class="brand-icon">
+
+                    <i class="fa-solid fa-font"></i>
+
+                </div>
+
+
+                <div class="brand-text">
+
+                    <strong>
+                        HANGOUT
+                    </strong>
+
+                    <span>
+                        FORCA
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             ROOM
+        ================================================== -->
+
+        <div class="game-room">
+
+            <span>
+                SALA
+            </span>
+
+            <strong id="roomCode">
+                -----
+            </strong>
+
+            <button
+                id="copyRoomCode"
+                class="room-copy"
+                type="button"
+                title="Copiar código"
+            >
+
+                <i class="fa-regular fa-copy"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- =================================================
+             HEADER RIGHT
+        ================================================== -->
+
+        <div class="game-header-right">
+
+            <div
+                class="connection-status"
+                id="connectionStatus"
+            >
+
+                <span></span>
+
+                <strong>
+                    Conectando...
+                </strong>
+
+            </div>
+
+
+            <button
+                class="icon-button"
+                id="soundButton"
+                type="button"
+                title="Som"
+            >
+
+                <i class="fa-solid fa-volume-high"></i>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         GAME CONTAINER
+    ====================================================== -->
+
+    <main class="game-container">
+
+
+        <!-- =================================================
+             TOP INFO
+        ================================================== -->
+
+        <section class="game-topbar">
+
+
+            <!-- ROUND -->
+
+            <div class="game-round">
+
+                <span>
+                    RODADA
+                </span>
+
+                <strong id="roundNumber">
+                    01
+                </strong>
+
+            </div>
+
+
+            <!-- CATEGORY -->
+
+            <div class="game-category">
+
+                <i class="fa-solid fa-layer-group"></i>
+
+                <div>
+
+                    <span>
+                        CATEGORIA
+                    </span>
+
+                    <strong id="category">
+                        AGUARDANDO...
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- TIMER -->
+
+            <div class="game-timer">
+
+                <div class="timer-icon">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                </div>
+
+                <div>
+
+                    <span>
+                        TEMPO
+                    </span>
+
+                    <strong id="timer">
+                        60
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             GAME GRID
+        ================================================== -->
+
+        <section class="game-grid">
+
+
+            <!-- =================================================
+                 LEFT — FORCA
+            ================================================== -->
+
+            <div class="hangman-card">
+
+
+                <!-- CARD HEADER -->
+
+                <div class="card-header">
+
+                    <div>
+
+                        <span>
+                            DESAFIO
+                        </span>
+
+                        <h1>
+                            Descubra a palavra
+                        </h1>
+
+                    </div>
+
+
+                    <div
+                        class="difficulty"
+                        id="difficulty"
+                    >
+
+                        <i class="fa-solid fa-fire"></i>
+
+                        NORMAL
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     HANGMAN
+                ================================================== -->
+
+                <div class="hangman-area">
+
+
+                    <div
+                        class="hangman"
+                        id="hangman"
+                    >
+
+
+                        <!-- GALHO -->
+
+                        <div class="hangman-base"></div>
+
+                        <div class="hangman-pole"></div>
+
+                        <div class="hangman-top"></div>
+
+                        <div class="hangman-rope"></div>
+
+
+                        <!-- CORPO -->
+
+                        <div
+                            class="hangman-head"
+                            data-part="head"
+                        ></div>
+
+                        <div
+                            class="hangman-body"
+                            data-part="body"
+                        ></div>
+
+                        <div
+                            class="hangman-arm left"
+                            data-part="left-arm"
+                        ></div>
+
+                        <div
+                            class="hangman-arm right"
+                            data-part="right-arm"
+                        ></div>
+
+                        <div
+                            class="hangman-leg left"
+                            data-part="left-leg"
+                        ></div>
+
+                        <div
+                            class="hangman-leg right"
+                            data-part="right-leg"
+                        ></div>
+
+                    </div>
+
+
+                    <!-- ERRORS -->
+
+                    <div class="mistakes">
+
+                        <div class="mistakes-header">
+
+                            <span>
+                                ERROS
+                            </span>
+
+                            <strong>
+
+                                <span id="mistakes">
+                                    0
+                                </span>
+
+                                /
+
+                                <span id="maxMistakes">
+                                    6
+                                </span>
+
+                            </strong>
+
+                        </div>
+
+
+                        <div
+                            class="mistakes-bar"
+                            id="mistakesBar"
+                        >
+
+                            <span></span>
+
+                            <span></span>
+
+                            <span></span>
+
+                            <span></span>
+
+                            <span></span>
+
+                            <span></span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     WORD
+                ================================================== -->
+
+                <div class="word-area">
+
+                    <span class="word-label">
+                        PALAVRA
+                    </span>
+
+
+                    <div
+                        class="word"
+                        id="word"
+                    >
+
+                        <span>_</span>
+
+                        <span>_</span>
+
+                        <span>_</span>
+
+                        <span>_</span>
+
+                        <span>_</span>
+
+                    </div>
+
+
+                    <p id="wordHint">
+                        Aguarde o início da rodada...
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 RIGHT — PLAYERS
+            ================================================== -->
+
+            <aside class="players-card">
+
+
+                <!-- HEADER -->
+
+                <div class="card-header players-header">
+
+                    <div>
+
+                        <span>
+                            JOGADORES
+                        </span>
+
+                        <h2>
+                            Sala
+                        </h2>
+
+                    </div>
+
+
+                    <div
+                        class="players-count"
+                        id="playersCount"
+                    >
+
+                        0
+
+                    </div>
+
+                </div>
+
+
+                <!-- PLAYER LIST -->
+
+                <div
+                    class="players-list"
+                    id="playersList"
+                >
+
+
+                    <!-- PLAYER -->
+
+                    <article class="game-player is-me">
+
+                        <div class="player-avatar">
+
+                            <i class="fa-solid fa-user"></i>
+
+                        </div>
+
+
+                        <div class="player-info">
+
+                            <strong>
+                                Você
+                            </strong>
+
+                            <span>
+                                Nível 1
+                            </span>
+
+                        </div>
+
+
+                        <div class="player-score">
+
+                            <strong>
+                                0
+                            </strong>
+
+                            <span>
+                                PTS
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+
+                <!-- =================================================
+                     TURN
+                ================================================== -->
+
+                <div class="turn-box">
+
+                    <div class="turn-icon">
+
+                        <i class="fa-solid fa-crosshairs"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            VEZ DE
+                        </span>
+
+                        <strong id="currentTurn">
+                            —
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+            </aside>
+
+        </section>
+
+
+
+        <!-- =================================================
+             KEYBOARD
+        ================================================== -->
+
+        <section class="keyboard-card">
+
+
+            <div class="keyboard-header">
+
+                <div>
+
+                    <span>
+                        LETRAS
+                    </span>
+
+                    <h2>
+                        Escolha uma letra
+                    </h2>
+
+                </div>
+
+
+                <div class="keyboard-status">
+
+                    <i class="fa-solid fa-keyboard"></i>
+
+                    <span id="keyboardStatus">
+                        Sua vez
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- KEYBOARD -->
+
+            <div
+                class="keyboard"
+                id="keyboard"
+            >
+
+                <!-- Linha 1 -->
+
+                <button data-letter="Q">
+                    Q
+                </button>
+
+                <button data-letter="W">
+                    W
+                </button>
+
+                <button data-letter="E">
+                    E
+                </button>
+
+                <button data-letter="R">
+                    R
+                </button>
+
+                <button data-letter="T">
+                    T
+                </button>
+
+                <button data-letter="Y">
+                    Y
+                </button>
+
+                <button data-letter="U">
+                    U
+                </button>
+
+                <button data-letter="I">
+                    I
+                </button>
+
+                <button data-letter="O">
+                    O
+                </button>
+
+                <button data-letter="P">
+                    P
+                </button>
+
+
+                <!-- Linha 2 -->
+
+                <button data-letter="A">
+                    A
+                </button>
+
+                <button data-letter="S">
+                    S
+                </button>
+
+                <button data-letter="D">
+                    D
+                </button>
+
+                <button data-letter="F">
+                    F
+                </button>
+
+                <button data-letter="G">
+                    G
+                </button>
+
+                <button data-letter="H">
+                    H
+                </button>
+
+                <button data-letter="J">
+                    J
+                </button>
+
+                <button data-letter="K">
+                    K
+                </button>
+
+                <button data-letter="L">
+                    L
+                </button>
+
+
+                <!-- Linha 3 -->
+
+                <button data-letter="Z">
+                    Z
+                </button>
+
+                <button data-letter="X">
+                    X
+                </button>
+
+                <button data-letter="C">
+                    C
+                </button>
+
+                <button data-letter="V">
+                    V
+                </button>
+
+                <button data-letter="B">
+                    B
+                </button>
+
+                <button data-letter="N">
+                    N
+                </button>
+
+                <button data-letter="M">
+                    M
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CHAT
+        ================================================== -->
+
+        <section class="game-chat-card">
+
+
+            <div class="chat-header">
+
+                <div>
+
+                    <span>
+                        SOCIAL
+                    </span>
+
+                    <h2>
+                        Chat da sala
+                    </h2>
+
+                </div>
+
+
+                <i class="fa-solid fa-comments"></i>
+
+            </div>
+
+
+            <div
+                class="chat-messages"
+                id="chatMessages"
+            >
+
+                <div class="chat-message system">
+
+                    <div class="chat-avatar">
+
+                        <i class="fa-solid fa-robot"></i>
+
+                    </div>
+
+
+                    <div class="chat-content">
+
+                        <strong>
+                            HANGOUT
+                        </strong>
+
+                        <p>
+                            Bem-vindo à partida!
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <form
+                class="chat-form"
+                id="chatForm"
+            >
+
+                <input
+                    type="text"
+                    id="chatInput"
+                    placeholder="Digite uma mensagem..."
+                    maxlength="250"
+                    autocomplete="off"
+                >
+
+
+                <button
+                    type="submit"
+                    title="Enviar"
+                >
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         GAME RESULT MODAL
+    ====================================================== -->
+
+    <div
+        class="game-modal"
+        id="gameResultModal"
+        aria-hidden="true"
+    >
+
+        <div class="modal-overlay"></div>
+
+
+        <div class="result-modal">
+
+
+            <button
+                class="modal-close"
+                id="closeResultModal"
+                type="button"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+
+            <div class="result-icon">
+
+                <i
+                    class="fa-solid fa-trophy"
+                    id="resultIcon"
+                ></i>
+
+            </div>
+
+
+            <span class="result-label">
+                RESULTADO
+            </span>
+
+
+            <h2 id="resultTitle">
+                Você venceu!
+            </h2>
+
+
+            <p id="resultMessage">
+                Parabéns! Você descobriu a palavra.
+            </p>
+
+
+            <div class="result-word">
+
+                <span>
+                    PALAVRA
+                </span>
+
+                <strong id="resultWord">
+                    —
+                </strong>
+
+            </div>
+
+
+            <div class="result-stats">
+
+
+                <div>
+
+                    <i class="fa-solid fa-star"></i>
+
+                    <span>
+                        PONTOS
+                    </span>
+
+                    <strong id="resultPoints">
+                        +0
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <i class="fa-solid fa-bolt"></i>
+
+                    <span>
+                        XP
+                    </span>
+
+                    <strong id="resultXP">
+                        +0
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+            <button
+                class="result-button"
+                id="nextRoundButton"
+                type="button"
+            >
+
+                <i class="fa-solid fa-forward"></i>
+
+                Próxima rodada
+
+            </button>
+
+
+            <button
+                class="result-secondary"
+                id="resultLeaveButton"
+                type="button"
+            >
+
+                Sair da partida
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         TOAST
+    ====================================================== -->
+
+    <div
+        class="toast-container"
+        id="toastContainer"
+    ></div>
+
+
+
+    <!-- =====================================================
+         SOCKET.IO
+    ====================================================== -->
+
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script
+        src="js/main.js"
+    ></script>
+
+    
+
+    <script
+        src="js/game.js"
+    ></script>
+
+</body>
+
+</html>

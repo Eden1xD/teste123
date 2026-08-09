@@ -1,0 +1,33 @@
+{
+  "name": "hangout-forca-multiplayer",
+  "version": "1.0.0",
+  "description": "Jogo da Forca multiplayer em tempo real com Node.js, Express e Socket.IO.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": [
+    "hangman",
+    "forca",
+    "multiplayer",
+    "socket.io",
+    "express",
+    "nodejs",
+    "game"
+  ],
+  "author": "Mateus",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "socket.io": "^4.8.3",
+    "sqlite3": "^5.1.7"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

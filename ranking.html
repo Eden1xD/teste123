@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <!-- =====================================================
+         CONFIGURAÇÕES
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#08080d"
+    >
+
+    <meta
+        name="description"
+        content="Hangout — Ranking dos jogadores"
+    >
+
+
+    <!-- =====================================================
+         TÍTULO
+    ====================================================== -->
+
+    <title>
+        Hangout — Ranking
+    </title>
+
+
+    <!-- =====================================================
+         FONTES
+    ====================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/ranking.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/responsive.css"
+    >
+
+</head>
+
+
+<body class="ranking-page">
+
+
+    <!-- =====================================================
+         BACKGROUND
+    ====================================================== -->
+
+    <div class="background">
+
+        <div class="background-grid"></div>
+
+        <div class="background-glow glow-one"></div>
+
+        <div class="background-glow glow-two"></div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="ranking-header">
+
+
+        <div class="ranking-header-left">
+
+
+            <!-- VOLTAR -->
+
+            <button
+                class="icon-button"
+                id="backButton"
+                type="button"
+                title="Voltar"
+            >
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+            </button>
+
+
+            <!-- BRAND -->
+
+            <a
+                href="index.html"
+                class="game-brand"
+            >
+
+                <div class="brand-icon">
+
+                    <i class="fa-solid fa-font"></i>
+
+                </div>
+
+
+                <div class="brand-text">
+
+                    <strong>
+                        HANGOUT
+                    </strong>
+
+                    <span>
+                        RANKING
+                    </span>
+
+                </div>
+
+            </a>
+
+        </div>
+
+
+
+        <!-- =================================================
+             NAV
+        ================================================== -->
+
+        <nav class="ranking-nav">
+
+            <a
+                href="lobby.html"
+                class="header-link"
+            >
+
+                <i class="fa-solid fa-gamepad"></i>
+
+                Jogar
+
+            </a>
+
+
+            <a
+                href="profile.html"
+                class="header-link"
+            >
+
+                <i class="fa-solid fa-user"></i>
+
+                Perfil
+
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="ranking-container">
+
+
+        <!-- =================================================
+             TITLE
+        ================================================== -->
+
+        <section class="ranking-title">
+
+
+            <div>
+
+                <span class="section-label">
+
+                    <i class="fa-solid fa-ranking-star"></i>
+
+                    COMPETIÇÃO
+
+                </span>
+
+
+                <h1>
+                    Ranking
+                </h1>
+
+
+                <p>
+                    Veja quem está dominando
+                    as partidas do Hangout.
+                </p>
+
+            </div>
+
+
+            <div class="ranking-live">
+
+                <span></span>
+
+                RANKING AO VIVO
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             PODIUM
+        ================================================== -->
+
+        <section class="podium">
+
+
+            <!-- =================================================
+                 2º
+            ================================================== -->
+
+            <article
+                class="podium-player second"
+                id="secondPlace"
+            >
+
+                <div class="podium-position">
+
+                    <i class="fa-solid fa-medal"></i>
+
+                    <span>
+                        2º
+                    </span>
+
+                </div>
+
+
+                <div class="podium-avatar">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+
+                <strong>
+                    —
+                </strong>
+
+
+                <span>
+                    0 XP
+                </span>
+
+
+                <div class="podium-base">
+
+                    <span>
+                        02
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 1º
+            ================================================== -->
+
+            <article
+                class="podium-player first"
+                id="firstPlace"
+            >
+
+                <div class="crown">
+
+                    <i class="fa-solid fa-crown"></i>
+
+                </div>
+
+
+                <div class="podium-position">
+
+                    <i class="fa-solid fa-trophy"></i>
+
+                    <span>
+                        1º
+                    </span>
+
+                </div>
+
+
+                <div class="podium-avatar">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+
+                <strong>
+                    —
+                </strong>
+
+
+                <span>
+                    0 XP
+                </span>
+
+
+                <div class="podium-base">
+
+                    <span>
+                        01
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================================
+                 3º
+            ================================================== -->
+
+            <article
+                class="podium-player third"
+                id="thirdPlace"
+            >
+
+                <div class="podium-position">
+
+                    <i class="fa-solid fa-medal"></i>
+
+                    <span>
+                        3º
+                    </span>
+
+                </div>
+
+
+                <div class="podium-avatar">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+
+                <strong>
+                    —
+                </strong>
+
+
+                <span>
+                    0 XP
+                </span>
+
+
+                <div class="podium-base">
+
+                    <span>
+                        03
+                    </span>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CURRENT PLAYER
+        ================================================== -->
+
+        <section class="my-ranking-card">
+
+
+            <div class="my-ranking-icon">
+
+                <i class="fa-solid fa-user"></i>
+
+            </div>
+
+
+            <div class="my-ranking-info">
+
+                <span>
+                    SUA POSIÇÃO
+                </span>
+
+                <strong id="currentUsername">
+                    Jogador
+                </strong>
+
+            </div>
+
+
+            <div class="my-ranking-position">
+
+                <span>
+                    POSIÇÃO
+                </span>
+
+                <strong id="currentPosition">
+                    #—
+                </strong>
+
+            </div>
+
+
+            <div class="my-ranking-stat">
+
+                <span>
+                    NÍVEL
+                </span>
+
+                <strong id="currentLevel">
+                    Nível 1
+                </strong>
+
+            </div>
+
+
+            <div class="my-ranking-stat">
+
+                <span>
+                    VITÓRIAS
+                </span>
+
+                <strong id="currentWins">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="my-ranking-stat">
+
+                <span>
+                    EXPERIÊNCIA
+                </span>
+
+                <strong id="currentXP">
+                    0 XP
+                </strong>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CONTROLS
+        ================================================== -->
+
+        <section class="ranking-controls">
+
+
+            <!-- SEARCH -->
+
+            <div class="ranking-search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="search"
+                    id="rankingSearch"
+                    placeholder="Pesquisar jogador..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <!-- FILTER -->
+
+            <div class="ranking-select">
+
+                <i class="fa-solid fa-filter"></i>
+
+                <select id="rankingFilter">
+
+                    <option value="all">
+                        Todos os jogadores
+                    </option>
+
+                    <option value="wins">
+                        Com vitórias
+                    </option>
+
+                    <option value="streak">
+                        Em sequência
+                    </option>
+
+                    <option value="level">
+                        Nível 5+
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- SORT -->
+
+            <div class="ranking-select">
+
+                <i class="fa-solid fa-arrow-down-wide-short"></i>
+
+                <select id="rankingSort">
+
+                    <option value="xp">
+                        Maior XP
+                    </option>
+
+                    <option value="wins">
+                        Mais vitórias
+                    </option>
+
+                    <option value="level">
+                        Maior nível
+                    </option>
+
+                    <option value="streak">
+                        Maior sequência
+                    </option>
+
+                    <option value="winrate">
+                        Maior Win Rate
+                    </option>
+
+                </select>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             RANKING HEADER
+        ================================================== -->
+
+        <section class="ranking-list-card">
+
+
+            <div class="ranking-list-header">
+
+                <div>
+
+                    <span>
+                        CLASSIFICAÇÃO
+                    </span>
+
+                    <h2>
+                        Jogadores
+                    </h2>
+
+                </div>
+
+
+                <div class="ranking-total">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <span id="totalPlayers">
+                        0 jogadores
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 COLUMN HEADERS
+            ================================================== -->
+
+            <div class="ranking-columns">
+
+                <span>
+                    POSIÇÃO
+                </span>
+
+                <span>
+                    JOGADOR
+                </span>
+
+                <span>
+                    ESTATÍSTICAS
+                </span>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PLAYERS
+            ================================================== -->
+
+            <div
+                class="ranking-list"
+                id="rankingList"
+            ></div>
+
+
+
+            <!-- =================================================
+                 PAGINATION
+            ================================================== -->
+
+            <div class="ranking-pagination">
+
+
+                <button
+                    class="pagination-button"
+                    id="rankingPrevious"
+                    type="button"
+                >
+
+                    <i class="fa-solid fa-chevron-left"></i>
+
+                    Anterior
+
+                </button>
+
+
+                <div class="pagination-info">
+
+                    <span>
+                        PÁGINA
+                    </span>
+
+                    <strong id="rankingPage">
+                        1 / 1
+                    </strong>
+
+                </div>
+
+
+                <button
+                    class="pagination-button"
+                    id="rankingNext"
+                    type="button"
+                >
+
+                    Próxima
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FOOTER INFO
+        ================================================== -->
+
+        <section class="ranking-footer-info">
+
+
+            <div>
+
+                <i class="fa-solid fa-circle-info"></i>
+
+                <span>
+                    O ranking é atualizado automaticamente.
+                </span>
+
+            </div>
+
+
+            <span id="rankingUpdated">
+                Atualizado agora
+            </span>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         TOAST
+    ====================================================== -->
+
+    <div
+        class="toast-container"
+        id="toastContainer"
+    ></div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script
+        src="js/main.js"
+    ></script>
+
+    <script
+        src="js/app.js"
+    ></script>
+
+    <script
+        src="js/ranking.js"
+    ></script>
+
+</body>
+
+</html>

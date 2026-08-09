@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <!-- =====================================================
+         CONFIGURAÇÕES
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#08080d"
+    >
+
+    <meta
+        name="description"
+        content="Hangout — Perfil do jogador"
+    >
+
+
+    <!-- =====================================================
+         TÍTULO
+    ====================================================== -->
+
+    <title>
+        Hangout — Meu Perfil
+    </title>
+
+
+    <!-- =====================================================
+         FONTES
+    ====================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/profile.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/responsive.css"
+    >
+
+</head>
+
+
+<body class="profile-page">
+
+
+    <!-- =====================================================
+         BACKGROUND
+    ====================================================== -->
+
+    <div class="background">
+
+        <div class="background-grid"></div>
+
+        <div class="background-glow glow-one"></div>
+
+        <div class="background-glow glow-two"></div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="profile-header">
+
+        <div class="profile-header-left">
+
+
+            <!-- VOLTAR -->
+
+            <button
+                class="icon-button"
+                id="backButton"
+                type="button"
+                title="Voltar"
+            >
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+            </button>
+
+
+            <!-- LOGO -->
+
+            <a
+                href="index.html"
+                class="game-brand"
+            >
+
+                <div class="brand-icon">
+
+                    <i class="fa-solid fa-font"></i>
+
+                </div>
+
+
+                <div class="brand-text">
+
+                    <strong>
+                        HANGOUT
+                    </strong>
+
+                    <span>
+                        PROFILE
+                    </span>
+
+                </div>
+
+            </a>
+
+        </div>
+
+
+        <!-- HEADER RIGHT -->
+
+        <div class="profile-header-right">
+
+            <a
+                href="ranking.html"
+                class="header-link"
+            >
+
+                <i class="fa-solid fa-trophy"></i>
+
+                Ranking
+
+            </a>
+
+
+            <a
+                href="lobby.html"
+                class="header-link"
+            >
+
+                <i class="fa-solid fa-gamepad"></i>
+
+                Jogar
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="profile-container">
+
+
+        <!-- =================================================
+             PROFILE HERO
+        ================================================== -->
+
+        <section class="profile-hero">
+
+
+            <!-- AVATAR -->
+
+            <div class="profile-avatar-wrapper">
+
+                <div
+                    class="profile-avatar"
+                    id="profileAvatar"
+                >
+
+                    <i
+                        class="fa-solid fa-user"
+                        id="profileAvatarIcon"
+                    ></i>
+
+                </div>
+
+
+                <div class="online-indicator">
+
+                    <span></span>
+
+                    ONLINE
+
+                </div>
+
+            </div>
+
+
+
+            <!-- INFO -->
+
+            <div class="profile-hero-info">
+
+                <span class="profile-label">
+                    JOGADOR
+                </span>
+
+
+                <h1 id="profileUsername">
+                    Jogador
+                </h1>
+
+
+                <div class="profile-meta">
+
+                    <span>
+
+                        <i class="fa-solid fa-gamepad"></i>
+
+                        Forca Multiplayer
+
+                    </span>
+
+
+                    <span>
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        Conta ativa
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ACTIONS -->
+
+            <div class="profile-actions">
+
+                <button
+                    class="primary-button"
+                    id="editUsername"
+                    type="button"
+                >
+
+                    <i class="fa-solid fa-pen"></i>
+
+                    Editar perfil
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             PROFILE GRID
+        ================================================== -->
+
+        <section class="profile-grid">
+
+
+            <!-- =================================================
+                 LEFT COLUMN
+            ================================================== -->
+
+            <div class="profile-main">
+
+
+                <!-- =================================================
+                     LEVEL CARD
+                ================================================== -->
+
+                <article class="profile-card level-card">
+
+
+                    <div class="card-top">
+
+                        <div>
+
+                            <span>
+                                PROGRESSO
+                            </span>
+
+                            <h2>
+                                Seu nível
+                            </h2>
+
+                        </div>
+
+
+                        <div class="level-badge">
+
+                            <i class="fa-solid fa-star"></i>
+
+                            <strong id="profileLevel">
+                                Nível 1
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- XP -->
+
+                    <div class="xp-content">
+
+                        <div class="xp-header">
+
+                            <div>
+
+                                <span>
+                                    EXPERIÊNCIA
+                                </span>
+
+                                <strong id="profileXP">
+                                    0 XP
+                                </strong>
+
+                            </div>
+
+
+                            <div class="xp-next">
+
+                                <span>
+                                    PRÓXIMO NÍVEL
+                                </span>
+
+                                <strong id="xpNext">
+                                    1000 XP
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="xp-bar">
+
+                            <div
+                                class="xp-progress"
+                                id="xpProgress"
+                            ></div>
+
+                        </div>
+
+
+                        <div class="xp-footer">
+
+                            <span id="xpCurrent">
+                                0 XP
+                            </span>
+
+                            <span>
+                                1000 XP
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     STATS
+                ================================================== -->
+
+                <article class="profile-card stats-card">
+
+
+                    <div class="card-top">
+
+                        <div>
+
+                            <span>
+                                DESEMPENHO
+                            </span>
+
+                            <h2>
+                                Estatísticas
+                            </h2>
+
+                        </div>
+
+
+                        <i class="fa-solid fa-chart-simple card-icon"></i>
+
+                    </div>
+
+
+                    <div class="stats-grid">
+
+
+                        <!-- PARTIDAS -->
+
+                        <div class="stat-item">
+
+                            <div class="stat-icon">
+
+                                <i class="fa-solid fa-gamepad"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    PARTIDAS
+                                </span>
+
+                                <strong id="gamesPlayed">
+                                    0
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- VITÓRIAS -->
+
+                        <div class="stat-item">
+
+                            <div class="stat-icon">
+
+                                <i class="fa-solid fa-trophy"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    VITÓRIAS
+                                </span>
+
+                                <strong id="gamesWon">
+                                    0
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- DERROTAS -->
+
+                        <div class="stat-item">
+
+                            <div class="stat-icon">
+
+                                <i class="fa-solid fa-xmark"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    DERROTAS
+                                </span>
+
+                                <strong id="gamesLost">
+                                    0
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- EMPATES -->
+
+                        <div class="stat-item">
+
+                            <div class="stat-icon">
+
+                                <i class="fa-solid fa-equals"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    EMPATES
+                                </span>
+
+                                <strong id="gamesDraw">
+                                    0
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- WIN RATE -->
+
+                        <div class="stat-item">
+
+                            <div class="stat-icon">
+
+                                <i class="fa-solid fa-chart-line"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    WIN RATE
+                                </span>
+
+                                <strong id="winRate">
+                                    0%
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- SEQUÊNCIA -->
+
+                        <div class="stat-item">
+
+                            <div class="stat-icon">
+
+                                <i class="fa-solid fa-fire"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    SEQUÊNCIA
+                                </span>
+
+                                <strong id="currentStreak">
+                                    0
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- MELHOR SEQUÊNCIA -->
+
+                        <div class="stat-item">
+
+                            <div class="stat-icon">
+
+                                <i class="fa-solid fa-bolt"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    MELHOR SEQUÊNCIA
+                                </span>
+
+                                <strong id="bestStreak">
+                                    0
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- XP -->
+
+                        <div class="stat-item">
+
+                            <div class="stat-icon">
+
+                                <i class="fa-solid fa-star"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    EXPERIÊNCIA
+                                </span>
+
+                                <strong id="profileXP">
+                                    0 XP
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 RIGHT COLUMN
+            ================================================== -->
+
+            <aside class="profile-sidebar">
+
+
+                <!-- =================================================
+                     AVATAR
+                ================================================== -->
+
+                <article class="profile-card avatar-card">
+
+
+                    <div class="card-top">
+
+                        <div>
+
+                            <span>
+                                PERSONALIZAÇÃO
+                            </span>
+
+                            <h2>
+                                Seu avatar
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <p class="card-description">
+
+                        Escolha o ícone que representa
+                        você nas partidas.
+
+                    </p>
+
+
+                    <div
+                        class="avatar-grid"
+                        id="avatarGrid"
+                    ></div>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     STREAK
+                ================================================== -->
+
+                <article class="profile-card streak-card">
+
+
+                    <div class="streak-icon">
+
+                        <i class="fa-solid fa-fire"></i>
+
+                    </div>
+
+
+                    <div class="streak-content">
+
+                        <span>
+                            SEQUÊNCIA ATUAL
+                        </span>
+
+                        <strong id="currentStreak">
+                            0
+                        </strong>
+
+                        <small>
+                            vitórias consecutivas
+                        </small>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     ACCOUNT
+                ================================================== -->
+
+                <article class="profile-card account-card">
+
+
+                    <div class="account-item">
+
+                        <div>
+
+                            <i class="fa-solid fa-shield-halved"></i>
+
+                            <span>
+                                Status da conta
+                            </span>
+
+                        </div>
+
+                        <strong class="account-active">
+                            ATIVA
+                        </strong>
+
+                    </div>
+
+
+                    <div class="account-item">
+
+                        <div>
+
+                            <i class="fa-solid fa-ranking-star"></i>
+
+                            <span>
+                                Ranking
+                            </span>
+
+                        </div>
+
+                        <a href="ranking.html">
+
+                            Ver ranking
+
+                            <i class="fa-solid fa-chevron-right"></i>
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="account-item">
+
+                        <div>
+
+                            <i class="fa-solid fa-gamepad"></i>
+
+                            <span>
+                                Jogar
+                            </span>
+
+                        </div>
+
+                        <a href="lobby.html">
+
+                            Encontrar partida
+
+                            <i class="fa-solid fa-chevron-right"></i>
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="account-item danger">
+
+                        <div>
+
+                            <i class="fa-solid fa-right-from-bracket"></i>
+
+                            <span>
+                                Sessão
+                            </span>
+
+                        </div>
+
+                        <button
+                            id="logoutButton"
+                            type="button"
+                        >
+
+                            Sair
+
+                            <i class="fa-solid fa-chevron-right"></i>
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+            </aside>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         EDIT PROFILE MODAL
+    ====================================================== -->
+
+    <div
+        class="profile-edit-overlay"
+        id="profileEdit"
+    >
+
+        <div class="profile-edit-modal">
+
+
+            <button
+                class="modal-close"
+                id="cancelEdit"
+                type="button"
+                title="Fechar"
+            >
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+
+            <div class="edit-icon">
+
+                <i class="fa-solid fa-user-pen"></i>
+
+            </div>
+
+
+            <span>
+                PERSONALIZAR
+            </span>
+
+
+            <h2>
+                Editar perfil
+            </h2>
+
+
+            <p>
+                Altere o nome que aparecerá
+                para os outros jogadores.
+            </p>
+
+
+            <label for="usernameInput">
+                NOME DE JOGADOR
+            </label>
+
+
+            <div class="input-wrapper">
+
+                <i class="fa-solid fa-user"></i>
+
+                <input
+                    type="text"
+                    id="usernameInput"
+                    maxlength="20"
+                    minlength="3"
+                    placeholder="Digite seu nome..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <div class="edit-actions">
+
+                <button
+                    class="secondary-button"
+                    id="cancelEdit"
+                    type="button"
+                >
+
+                    Cancelar
+
+                </button>
+
+
+                <button
+                    class="primary-button"
+                    id="saveProfile"
+                    type="button"
+                >
+
+                    <i class="fa-solid fa-check"></i>
+
+                    Salvar alterações
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         TOAST
+    ====================================================== -->
+
+    <div
+        class="toast-container"
+        id="toastContainer"
+    ></div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script
+        src="js/main.js"
+    ></script>
+
+    <script
+        src="js/app.js"
+    ></script>
+
+    <script
+        src="js/profile.js"
+    ></script>
+
+</body>
+
+</html>

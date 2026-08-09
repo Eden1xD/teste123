@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <!-- =====================================================
+         CONFIGURAÇÕES
+    ====================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="HANGOUT — Jogue forca multiplayer com seus amigos."
+    >
+
+    <meta
+        name="theme-color"
+        content="#07070a"
+    >
+
+    <title>HANGOUT — Forca Multiplayer</title>
+
+
+    <!-- =====================================================
+         FAVICON
+    ====================================================== -->
+
+    <link
+        rel="icon"
+        href="assets/images/favicon.png"
+    >
+
+
+    <!-- =====================================================
+         FONTES
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700;800&family=Orbitron:wght@500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/responsive.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         BACKGROUND
+    ====================================================== -->
+
+    <div class="background-grid"></div>
+
+    <div class="background-glow one"></div>
+
+    <div class="background-glow two"></div>
+
+
+    <!-- =====================================================
+         LOADING
+    ====================================================== -->
+
+    <div
+        class="loading-screen"
+        id="loadingScreen"
+    >
+
+        <div class="loader-content">
+
+            <div class="loader-logo">
+                FORCA TESTE
+            </div>
+
+            <div class="loader">
+
+                <div class="loader-bar"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <header class="navbar">
+
+        <div class="navbar-inner">
+
+
+            <!-- LOGO -->
+
+            <a
+                href="#"
+                class="logo"
+            >
+
+                <div class="logo-icon">
+
+                    <i class="fa-solid fa-gamepad"></i>
+
+                </div>
+
+
+                <div class="logo-content">
+
+                    <span class="logo-title">
+                        JOGO ONLINE
+                    </span>
+
+                    <span class="logo-subtitle">
+                        Multiplayer 
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="nav-links">
+
+                <a
+                    href="#inicio"
+                    class="nav-link active"
+                >
+                    Início
+                </a>
+
+                <a
+                    href="#como-jogar"
+                    class="nav-link"
+                >
+                    Como jogar
+                </a>
+
+                <a
+                    href="#recursos"
+                    class="nav-link"
+                >
+                    Recursos
+                </a>
+
+            </nav>
+
+
+            <!-- ACTIONS -->
+
+            <div class="nav-actions">
+
+                <button
+                    class="btn btn-secondary btn-sm"
+                    id="openJoinButton"
+                >
+
+                    <i class="fa-solid fa-right-to-bracket"></i>
+
+                    <span>
+                        Entrar
+                    </span>
+
+                </button>
+
+                <button
+                    class="btn btn-primary btn-sm"
+                    id="openCreateButton"
+                >
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    <span>
+                        Criar sala
+                    </span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <main id="inicio">
+
+
+        <section class="hero">
+
+
+            <!-- DECORAÇÃO -->
+
+            <div class="hero-decoration">
+
+                <div class="hero-circle one"></div>
+
+                <div class="hero-circle two"></div>
+
+                <div class="hero-circle three"></div>
+
+            </div>
+
+
+            <!-- CONTEÚDO -->
+
+            <div class="container">
+
+                <div class="hero-content">
+
+
+                    <!-- BADGE -->
+
+                    <div class="hero-badge">
+
+                        <span class="hero-badge-dot"></span>
+
+                        <span>
+                            teste jogo
+                        </span>
+
+                    </div>
+
+
+                    <!-- TÍTULO -->
+
+                    <h1>
+
+                       JOGO TESTE
+
+                        <span>
+                            MATEUS
+                        </span>
+
+                    </h1>
+
+
+                    <!-- DESCRIÇÃO -->
+
+                    <p class="hero-description">
+
+                        Crie uma sala, convide seus amigos e descubra
+                        quem consegue adivinhar a palavra primeiro.
+                        Simples de jogar. Difícil de parar.
+
+                    </p>
+
+
+                    <!-- BOTÕES -->
+
+                    <div class="hero-actions">
+
+                        <button
+                            class="btn btn-primary btn-lg"
+                            id="heroCreateButton"
+                        >
+
+                            <i class="fa-solid fa-play"></i>
+
+                            Criar uma sala
+
+                        </button>
+
+
+                        <button
+                            class="btn btn-secondary btn-lg"
+                            id="heroJoinButton"
+                        >
+
+                            <i class="fa-solid fa-link"></i>
+
+                            Entrar com código
+
+                        </button>
+
+                    </div>
+
+
+                    <!-- STATUS -->
+
+                    <div
+                        style="
+                            display:flex;
+                            justify-content:center;
+                            align-items:center;
+                            gap:8px;
+                            margin-top:22px;
+                            color:#55555f;
+                            font-size:9px;
+                            font-weight:700;
+                        "
+                    >
+
+                        <span
+                            style="
+                                width:6px;
+                                height:6px;
+                                border-radius:50%;
+                                background:#22c55e;
+                                box-shadow:0 0 10px rgba(34,197,94,.5);
+                            "
+                        ></span>
+
+                        <span>
+                            Servidores online
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             COMO JOGAR
+        ================================================== -->
+
+        <section
+            class="section"
+            id="como-jogar"
+        >
+
+            <div class="container">
+
+
+                <div class="section-header">
+
+                    <span class="section-label">
+                        COMO FUNCIONA
+                    </span>
+
+                    <h2 class="section-title">
+                        Comece em poucos segundos.
+                    </h2>
+
+                    <p class="section-description">
+                        Nada complicado. Crie uma sala, compartilhe
+                        o código e comece a partida.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-grid">
+
+
+                    <!-- PASSO 01 -->
+
+                    <article class="card card-hover feature-card">
+
+                        <div class="feature-icon">
+
+                            <i class="fa-solid fa-door-open"></i>
+
+                        </div>
+
+                        <h3>
+                            01. Crie uma sala
+                        </h3>
+
+                        <p>
+                            Escolha as configurações da partida
+                            e gere automaticamente um código único.
+                        </p>
+
+                    </article>
+
+
+                    <!-- PASSO 02 -->
+
+                    <article class="card card-hover feature-card">
+
+                        <div class="feature-icon">
+
+                            <i class="fa-solid fa-user-group"></i>
+
+                        </div>
+
+                        <h3>
+                            02. Convide seus amigos
+                        </h3>
+
+                        <p>
+                            Envie o código da sala para seus amigos
+                            e espere todos entrarem.
+                        </p>
+
+                    </article>
+
+
+                    <!-- PASSO 03 -->
+
+                    <article class="card card-hover feature-card">
+
+                        <div class="feature-icon">
+
+                            <i class="fa-solid fa-trophy"></i>
+
+                        </div>
+
+                        <h3>
+                            03. Domine a partida
+                        </h3>
+
+                        <p>
+                            Descubra as letras, complete a palavra
+                            e acumule pontos para subir no ranking.
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             RECURSOS
+        ================================================== -->
+
+        <section
+            class="section"
+            id="recursos"
+        >
+
+            <div class="container">
+
+
+                <div class="section-header">
+
+                    <span class="section-label">
+                        HANGOUT
+                    </span>
+
+                    <h2 class="section-title">
+                        Mais que um jogo de forca.
+                    </h2>
+
+                    <p class="section-description">
+                        Uma experiência multiplayer criada para
+                        partidas rápidas e competitivas.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-grid">
+
+
+                    <article class="card card-hover feature-card">
+
+                        <div class="feature-icon">
+
+                            <i class="fa-solid fa-bolt"></i>
+
+                        </div>
+
+                        <h3>
+                            Partidas rápidas
+                        </h3>
+
+                        <p>
+                            Entre na sala e comece a jogar sem
+                            perder tempo com configurações complexas.
+                        </p>
+
+                    </article>
+
+
+                    <article class="card card-hover feature-card">
+
+                        <div class="feature-icon">
+
+                            <i class="fa-solid fa-ranking-star"></i>
+
+                        </div>
+
+                        <h3>
+                            Ranking
+                        </h3>
+
+                        <p>
+                            Ganhe XP, vença partidas e tente
+                            alcançar as primeiras posições.
+                        </p>
+
+                    </article>
+
+
+                    <article class="card card-hover feature-card">
+
+                        <div class="feature-icon">
+
+                            <i class="fa-solid fa-comments"></i>
+
+                        </div>
+
+                        <h3>
+                            Chat em tempo real
+                        </h3>
+
+                        <p>
+                            Converse com os jogadores enquanto
+                            disputa cada palavra.
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             CTA
+        ================================================== -->
+
+        <section class="section">
+
+            <div class="container">
+
+                <div
+                    class="card"
+                    style="
+                        position:relative;
+                        overflow:hidden;
+                        padding:55px 30px;
+                        text-align:center;
+                    "
+                >
+
+                    <div
+                        style="
+                            position:absolute;
+                            width:350px;
+                            height:350px;
+                            left:50%;
+                            top:50%;
+                            transform:translate(-50%,-50%);
+                            background:rgba(124,58,237,.08);
+                            filter:blur(80px);
+                            pointer-events:none;
+                        "
+                    ></div>
+
+
+                    <div style="position:relative;">
+
+                        <span class="section-label">
+                            PRONTO?
+                        </span>
+
+                        <h2
+                            class="section-title"
+                            style="margin-top:10px;"
+                        >
+                            Sua próxima partida começa aqui.
+                        </h2>
+
+                        <p
+                            class="section-description"
+                            style="margin-left:auto;margin-right:auto;"
+                        >
+                            Crie uma sala e desafie seus amigos
+                            agora mesmo.
+                        </p>
+
+                        <button
+                            class="btn btn-primary btn-lg"
+                            id="ctaCreateButton"
+                            style="margin-top:22px;"
+                        >
+
+                            <i class="fa-solid fa-gamepad"></i>
+
+                            Jogar agora
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <div class="container footer-inner">
+
+            <span class="footer-copy">
+
+                © 2026 HANGOUT.
+                Todos os direitos reservados.
+
+            </span>
+
+            <div class="footer-links">
+
+                <a
+                    href="#"
+                    class="footer-link"
+                >
+                    Privacidade
+                </a>
+
+                <a
+                    href="#"
+                    class="footer-link"
+                >
+                    Termos
+                </a>
+
+                <a
+                    href="#"
+                    class="footer-link"
+                >
+                    Discord
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================================
+         MODAL — CRIAR SALA
+    ====================================================== -->
+
+    <div
+        class="modal"
+        id="createModal"
+    >
+
+        <div class="modal-content">
+
+
+            <div class="modal-header">
+
+                <div>
+
+                    <h2 class="modal-title">
+                        Criar sala
+                    </h2>
+
+                    <p class="modal-description">
+                        Configure sua partida antes de começar.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="modal-close"
+                    data-close-modal="createModal"
+                >
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+            <form id="createRoomForm">
+
+
+                <div class="form-group">
+
+                    <label class="form-label">
+                        Seu nome
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <i class="fa-solid fa-user input-icon"></i>
+
+                        <input
+                            type="text"
+                            class="form-input has-icon"
+                            id="createUsername"
+                            placeholder="Digite seu nome"
+                            maxlength="16"
+                            autocomplete="off"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label class="form-label">
+                        Número de rodadas
+                    </label>
+
+                    <div class="option-grid">
+
+
+                        <div class="option">
+
+                            <input
+                                type="radio"
+                                name="rounds"
+                                id="rounds3"
+                                value="3"
+                                checked
+                            >
+
+                            <label for="rounds3">
+
+                                <i class="fa-solid fa-3"></i>
+
+                                3 rodadas
+
+                            </label>
+
+                        </div>
+
+
+                        <div class="option">
+
+                            <input
+                                type="radio"
+                                name="rounds"
+                                id="rounds5"
+                                value="5"
+                            >
+
+                            <label for="rounds5">
+
+                                <i class="fa-solid fa-5"></i>
+
+                                5 rodadas
+
+                            </label>
+
+                        </div>
+
+
+                        <div class="option">
+
+                            <input
+                                type="radio"
+                                name="rounds"
+                                id="rounds10"
+                                value="10"
+                            >
+
+                            <label for="rounds10">
+
+                                <i class="fa-solid fa-1"></i>
+
+                                10 rodadas
+
+                            </label>
+
+                        </div>
+
+
+                        <div class="option">
+
+                            <input
+                                type="radio"
+                                name="rounds"
+                                id="roundsInfinite"
+                                value="infinite"
+                            >
+
+                            <label for="roundsInfinite">
+
+                                <i class="fa-solid fa-infinity"></i>
+
+                                Sem limite
+
+                            </label>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label class="form-label">
+                        Dificuldade
+                    </label>
+
+                    <select
+                        class="form-select"
+                        id="difficulty"
+                    >
+
+                        <option value="easy">
+                            Fácil
+                        </option>
+
+                        <option
+                            value="normal"
+                            selected
+                        >
+                            Normal
+                        </option>
+
+                        <option value="hard">
+                            Difícil
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="modal-footer">
+
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-close-modal="createModal"
+                    >
+                        Cancelar
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                    >
+
+                        <i class="fa-solid fa-plus"></i>
+
+                        Criar sala
+
+                    </button>
+
+                </div>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         MODAL — ENTRAR NA SALA
+    ====================================================== -->
+
+    <div
+        class="modal"
+        id="joinModal"
+    >
+
+        <div class="modal-content">
+
+
+            <div class="modal-header">
+
+                <div>
+
+                    <h2 class="modal-title">
+                        Entrar na sala
+                    </h2>
+
+                    <p class="modal-description">
+                        Digite o código recebido do seu amigo.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="modal-close"
+                    data-close-modal="joinModal"
+                >
+
+                    <i class="fa-solid fa-xmark"></i>
+
+                </button>
+
+            </div>
+
+
+            <form id="joinRoomForm">
+
+
+                <div class="form-group">
+
+                    <label class="form-label">
+                        Seu nome
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <i class="fa-solid fa-user input-icon"></i>
+
+                        <input
+                            type="text"
+                            class="form-input has-icon"
+                            id="joinUsername"
+                            placeholder="Digite seu nome"
+                            maxlength="16"
+                            autocomplete="off"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label class="form-label">
+                        Código da sala
+                    </label>
+
+                    <div class="input-wrapper">
+
+                        <i class="fa-solid fa-key input-icon"></i>
+
+                        <input
+                            type="text"
+                            class="form-input has-icon"
+                            id="roomCode"
+                            placeholder="Ex: H7K2P"
+                            maxlength="5"
+                            autocomplete="off"
+                            style="
+                                text-transform:uppercase;
+                                letter-spacing:3px;
+                                font-family:'JetBrains Mono',monospace;
+                                font-weight:800;
+                            "
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="modal-footer">
+
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-close-modal="joinModal"
+                    >
+                        Cancelar
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary"
+                    >
+
+                        <i class="fa-solid fa-right-to-bracket"></i>
+
+                        Entrar
+
+                    </button>
+
+                </div>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         TOAST CONTAINER
+    ====================================================== -->
+
+    <div
+        class="toast-container"
+        id="toastContainer"
+    ></div>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
