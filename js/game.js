@@ -300,7 +300,7 @@
                 if (state.roomCode) {
 
                     socket.emit(
-                        'joinRoom',
+                        'join-room',
                         {
 
                             code:
@@ -1008,7 +1008,7 @@
 
 
         socket.emit(
-            'guessLetter',
+            'guess-letter',
             normalized
         );
 
@@ -2406,7 +2406,7 @@
     function leaveGame() {
 
         socket.emit(
-            'leaveRoom'
+            'leave-room'
         );
 
 
