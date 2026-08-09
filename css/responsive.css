@@ -1,0 +1,920 @@
+/* =========================================================
+   HANGOUT — RESPONSIVE CSS
+   Mobile / Tablet / Desktop
+   ========================================================= */
+
+
+/* =========================================================
+   01. LARGE DESKTOP
+   ========================================================= */
+
+@media (min-width: 1600px) {
+
+    .game-container {
+        padding: 30px 40px;
+    }
+
+    .game-layout {
+        max-width: 1750px;
+    }
+
+    .game-card {
+        min-height: 650px;
+    }
+
+    .hangman-wrapper {
+        width: 380px;
+        height: 310px;
+    }
+
+    .word-letter {
+        width: 40px;
+        height: 55px;
+
+        font-size: 26px;
+    }
+
+    .key {
+        width: 50px;
+        height: 46px;
+    }
+}
+
+
+/* =========================================================
+   02. DESKTOP
+   ========================================================= */
+
+@media (max-width: 1400px) {
+
+    .game-layout {
+        grid-template-columns:
+            minmax(0, 1fr)
+            300px;
+    }
+
+    .game-card {
+        min-height: 540px;
+    }
+
+    .game-sidebar {
+        gap: 16px;
+    }
+
+    .players-card,
+    .chat-card {
+        border-radius: 19px;
+    }
+}
+
+
+/* =========================================================
+   03. NOTEBOOK
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+    .game-container {
+        padding: 18px;
+    }
+
+    .game-layout {
+        grid-template-columns:
+            minmax(0, 1fr)
+            280px;
+
+        gap: 16px;
+    }
+
+    .game-header {
+        margin-bottom: 16px;
+    }
+
+    .game-card {
+        min-height: 520px;
+        padding: 34px 24px 28px;
+    }
+
+    .hangman-wrapper {
+        width: 300px;
+        height: 250px;
+    }
+
+    .keyboard-card {
+        padding: 20px;
+    }
+
+    .key {
+        width: 40px;
+        height: 39px;
+    }
+
+    .players-card {
+        padding: 18px;
+    }
+
+    .chat-messages {
+        max-height: 250px;
+    }
+}
+
+
+/* =========================================================
+   04. TABLET LANDSCAPE
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+    .game-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .game-sidebar {
+        display: grid;
+
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(0, 1fr);
+
+        gap: 16px;
+    }
+
+    .players-card {
+        min-height: 260px;
+    }
+
+    .chat-card {
+        min-height: 260px;
+    }
+
+    .chat-messages {
+        min-height: 180px;
+        max-height: 200px;
+    }
+}
+
+
+/* =========================================================
+   05. TABLET PORTRAIT
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .game-container {
+        padding: 14px;
+    }
+
+    .game-header {
+        height: 64px;
+
+        padding: 0 16px;
+    }
+
+    .game-layout {
+        gap: 14px;
+    }
+
+    .game-card {
+        min-height: 500px;
+
+        padding: 30px 20px 25px;
+    }
+
+    .hangman-wrapper {
+        width: 280px;
+        height: 235px;
+    }
+
+    .keyboard {
+        gap: 7px;
+    }
+
+    .key {
+        width: 38px;
+        height: 38px;
+    }
+
+    .game-sidebar {
+        grid-template-columns: 1fr;
+    }
+
+    .players-card,
+    .chat-card {
+        width: 100%;
+    }
+}
+
+
+/* =========================================================
+   06. MOBILE — 600PX
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .game-container {
+        width: 100%;
+
+        padding: 9px;
+    }
+
+    /* HEADER */
+
+    .game-header {
+        width: 100%;
+        height: 58px;
+
+        padding: 0 11px;
+
+        border-radius: 14px;
+    }
+
+    .game-brand {
+        gap: 8px;
+    }
+
+    .game-brand-icon {
+        width: 34px;
+        height: 34px;
+
+        border-radius: 9px;
+    }
+
+    .game-brand-title {
+        font-size: 10px;
+
+        letter-spacing: 1.5px;
+    }
+
+    .game-brand-subtitle {
+        display: none;
+    }
+
+    .room-info {
+        margin-left: auto;
+    }
+
+    .room-label {
+        display: none;
+    }
+
+    .room-code {
+        padding: 7px 9px;
+
+        font-size: 8px;
+
+        letter-spacing: 1.5px;
+    }
+
+    .header-actions {
+        gap: 5px;
+    }
+
+    .header-action {
+        width: 34px;
+        height: 34px;
+
+        border-radius: 9px;
+    }
+
+
+    /* MAIN */
+
+    .game-layout {
+        display: flex;
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .game-main {
+        gap: 10px;
+    }
+
+
+    /* GAME */
+
+    .game-card {
+        width: 100%;
+        min-height: 475px;
+
+        padding: 24px 10px 20px;
+
+        border-radius: 17px;
+    }
+
+    .turn-indicator {
+        padding: 8px 12px;
+
+        font-size: 9px;
+    }
+
+
+    /* HANGMAN */
+
+    .hangman-wrapper {
+        width: 255px;
+        height: 220px;
+
+        margin-top: 12px;
+    }
+
+
+    /* WORD */
+
+    .word-area {
+        margin-top: 4px;
+
+        gap: 10px;
+    }
+
+    .word {
+        width: 100%;
+
+        gap: 5px;
+
+        padding: 0 4px;
+    }
+
+    .word-letter {
+        width: 25px;
+        height: 39px;
+
+        border-bottom-width: 2px;
+
+        font-size: 16px;
+    }
+
+    .word-letter.space {
+        width: 12px;
+    }
+
+
+    /* STATUS */
+
+    .game-status {
+        gap: 10px;
+
+        margin-top: 12px;
+    }
+
+    .status-item {
+        font-size: 9px;
+    }
+
+
+    /* KEYBOARD */
+
+    .keyboard-card {
+        padding: 17px 10px;
+
+        border-radius: 17px;
+    }
+
+    .keyboard-title {
+        margin-bottom: 13px;
+    }
+
+    .keyboard-title h3 {
+        font-size: 10px;
+    }
+
+    .keyboard-title span {
+        font-size: 8px;
+    }
+
+    .keyboard {
+        width: 100%;
+
+        gap: 5px;
+    }
+
+    .key {
+        width: calc((100% - 40px) / 9);
+        max-width: 38px;
+
+        height: 37px;
+
+        border-radius: 8px;
+
+        font-size: 9px;
+    }
+
+
+    /* SIDEBAR */
+
+    .game-sidebar {
+        display: flex;
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .players-card,
+    .chat-card {
+        border-radius: 17px;
+    }
+
+
+    /* PLAYERS */
+
+    .players-card {
+        padding: 16px;
+    }
+
+    .card-header {
+        margin-bottom: 12px;
+    }
+
+    .card-header h3 {
+        font-size: 10px;
+    }
+
+    .card-header span {
+        font-size: 8px;
+    }
+
+    .players-list {
+        gap: 6px;
+    }
+
+    .player {
+        padding: 9px;
+    }
+
+    .player-avatar {
+        width: 34px;
+        height: 34px;
+
+        border-radius: 9px;
+
+        font-size: 14px;
+    }
+
+    .player-name {
+        font-size: 10px;
+    }
+
+    .player-level {
+        font-size: 8px;
+    }
+
+    .player-hearts {
+        font-size: 8px;
+    }
+
+
+    /* CHAT */
+
+    .chat-card {
+        min-height: 290px;
+    }
+
+    .chat-messages {
+        min-height: 190px;
+        max-height: 220px;
+
+        padding: 14px;
+
+        gap: 10px;
+    }
+
+    .chat-user {
+        font-size: 9px;
+    }
+
+    .chat-text {
+        font-size: 10px;
+    }
+
+    .chat-time {
+        font-size: 7px;
+    }
+
+    .chat-form {
+        padding: 9px;
+    }
+
+    .chat-input {
+        height: 37px;
+
+        font-size: 10px;
+    }
+
+    .chat-send {
+        width: 37px;
+        height: 37px;
+    }
+}
+
+
+/* =========================================================
+   07. MOBILE — 480PX
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .game-container {
+        padding: 7px;
+    }
+
+    .game-header {
+        height: 55px;
+
+        padding: 0 9px;
+    }
+
+    .game-brand-icon {
+        display: none;
+    }
+
+    .game-brand-title {
+        font-size: 9px;
+    }
+
+    .room-code {
+        padding: 6px 8px;
+
+        font-size: 7px;
+    }
+
+    .header-action {
+        width: 31px;
+        height: 31px;
+
+        font-size: 10px;
+    }
+
+
+    .game-card {
+        min-height: 440px;
+
+        padding-top: 20px;
+    }
+
+    .hangman-wrapper {
+        width: 225px;
+        height: 195px;
+    }
+
+    .hangman-part {
+        stroke-width: 5;
+    }
+
+
+    .word {
+        gap: 4px;
+    }
+
+    .word-letter {
+        width: 22px;
+        height: 35px;
+
+        font-size: 14px;
+    }
+
+    .word-letter.space {
+        width: 9px;
+    }
+
+
+    .game-status {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 8px;
+    }
+
+    .status-item {
+        font-size: 8px;
+    }
+
+
+    .keyboard-card {
+        padding: 14px 7px;
+    }
+
+    .keyboard {
+        gap: 4px;
+    }
+
+    .key {
+        width: calc((100% - 32px) / 9);
+
+        height: 34px;
+
+        max-width: 34px;
+
+        font-size: 8px;
+
+        border-radius: 7px;
+    }
+
+
+    .players-card {
+        padding: 13px;
+    }
+
+    .player {
+        padding: 8px;
+    }
+
+    .player-avatar {
+        width: 32px;
+        height: 32px;
+    }
+
+
+    .result-card {
+        padding: 24px 15px;
+
+        border-radius: 20px;
+    }
+
+    .result-icon {
+        width: 58px;
+        height: 58px;
+
+        margin-bottom: 14px;
+
+        border-radius: 16px;
+
+        font-size: 22px;
+    }
+
+    .result-card h2 {
+        font-size: 17px;
+    }
+
+    .result-subtitle {
+        font-size: 10px;
+    }
+
+    .result-word {
+        margin: 18px 0;
+
+        font-size: 17px;
+
+        letter-spacing: 3px;
+    }
+
+    .result-stats {
+        gap: 5px;
+    }
+
+    .result-stat {
+        padding: 11px 5px;
+    }
+
+    .result-stat strong {
+        font-size: 13px;
+    }
+
+    .result-stat span {
+        font-size: 7px;
+    }
+
+    .result-button {
+        height: 42px;
+
+        font-size: 9px;
+    }
+}
+
+
+/* =========================================================
+   08. MOBILE — 380PX
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+    .game-header {
+        height: 52px;
+    }
+
+    .game-brand-title {
+        font-size: 8px;
+    }
+
+    .room-code {
+        display: none;
+    }
+
+    .header-actions {
+        gap: 3px;
+    }
+
+    .header-action {
+        width: 29px;
+        height: 29px;
+    }
+
+
+    .game-card {
+        min-height: 410px;
+
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .hangman-wrapper {
+        width: 205px;
+        height: 180px;
+    }
+
+
+    .word-letter {
+        width: 20px;
+        height: 32px;
+
+        font-size: 13px;
+    }
+
+    .word-letter.space {
+        width: 7px;
+    }
+
+
+    .keyboard {
+        gap: 3px;
+    }
+
+    .key {
+        width: calc((100% - 24px) / 9);
+
+        height: 31px;
+
+        font-size: 7px;
+    }
+
+
+    .player-name {
+        max-width: 100px;
+    }
+
+
+    .chat-messages {
+        min-height: 170px;
+    }
+}
+
+
+/* =========================================================
+   09. VERY SMALL DEVICES
+   ========================================================= */
+
+@media (max-width: 340px) {
+
+    .game-container {
+        padding: 4px;
+    }
+
+    .game-header {
+        border-radius: 11px;
+    }
+
+    .game-card,
+    .keyboard-card,
+    .players-card,
+    .chat-card {
+        border-radius: 13px;
+    }
+
+    .game-card {
+        min-height: 390px;
+    }
+
+    .hangman-wrapper {
+        width: 185px;
+        height: 160px;
+    }
+
+    .word-letter {
+        width: 18px;
+        height: 29px;
+
+        font-size: 11px;
+    }
+
+    .key {
+        height: 29px;
+    }
+}
+
+
+/* =========================================================
+   10. LANDSCAPE MOBILE
+   ========================================================= */
+
+@media (max-height: 600px) and (orientation: landscape) {
+
+    .game-container {
+        padding: 8px;
+    }
+
+    .game-header {
+        height: 50px;
+    }
+
+    .game-layout {
+        grid-template-columns:
+            minmax(0, 1fr)
+            250px;
+
+        display: grid;
+    }
+
+    .game-card {
+        min-height: 430px;
+
+        padding-top: 18px;
+    }
+
+    .hangman-wrapper {
+        width: 230px;
+        height: 185px;
+    }
+
+    .word-letter {
+        height: 34px;
+    }
+
+    .keyboard-card {
+        padding: 14px;
+    }
+
+    .key {
+        width: 34px;
+        height: 32px;
+    }
+
+    .game-sidebar {
+        display: flex;
+    }
+
+    .chat-messages {
+        max-height: 170px;
+    }
+}
+
+
+/* =========================================================
+   11. TOUCH DEVICES
+   ========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+
+    .key:hover:not(:disabled),
+    .header-action:hover,
+    .chat-send:hover,
+    .result-button:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .key {
+        -webkit-tap-highlight-color: transparent;
+
+        touch-action: manipulation;
+    }
+
+    button {
+        -webkit-tap-highlight-color: transparent;
+    }
+}
+
+
+/* =========================================================
+   12. SAFE AREA — IPHONE
+   ========================================================= */
+
+@supports (padding: max(0px)) {
+
+    .game-container {
+        padding-left: max(9px, env(safe-area-inset-left));
+        padding-right: max(9px, env(safe-area-inset-right));
+
+        padding-bottom: max(9px, env(safe-area-inset-bottom));
+    }
+}
+
+
+/* =========================================================
+   13. REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
